@@ -30,8 +30,8 @@ def RPS():
       computer = int(computerschoice)
 
       # prints the result of the user and computer's choice
-      print("\nyou chose" + " " + RPS(nonso).name + ".")
-      print("\ncomputer chose" + " " + RPS(computer).name + ".")
+      print(f"\nyou chose  {RPS(nonso).name }.")
+      print(f"\ncomputer chose  {RPS(computer).name} .")
 
       #Determines the winner
       def winner_decision(player, computer):
@@ -57,9 +57,9 @@ def RPS():
       nonlocal game_count
       game_count += 1
 
-      print("\nThe Game Count is: " + str(game_count))
-      print("\nNonso wins: " + str(nonso_wins))
-      print("\nComputer wins: " + str(computer_wins))
+      print(f"\nThe Game Count is:  {str(game_count)}")
+      print(f"\nNonso wins:  {str(nonso_wins)}")
+      print(f"\nComputer wins:  {str(computer_wins)}")
       
       print("\n Play again?")
       while True:
