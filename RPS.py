@@ -75,5 +75,6 @@ def RPS():
         print("thank you for playing!")
         sys.exit("Bye!, 👋")
    return play_rps      
-play = RPS()    
-play()
+rock_paper_scissors = RPS()    
+if __name__ == "__main__":
+  rock_paper_scissors()
