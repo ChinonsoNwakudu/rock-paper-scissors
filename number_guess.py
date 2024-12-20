@@ -1,8 +1,12 @@
 import random
 import sys
-def guess_number(name="newplayer"):
+
+
+def number_guess(name="newplayer"):
     game_count = 0
     newplayer_win = 0
+    
+    
     def play_guess_num():
         nonlocal name
         print(f"\n Hello {name}, Welcome to the Number-Guessing game!😀")
@@ -35,6 +39,7 @@ def guess_number(name="newplayer"):
         # Game counter; counts the number of times a person plays
         nonlocal game_count
         game_count +=1
+        
         print(f"\nThe Game Count is: {game_count}")
         print(f"{name}'s win: {newplayer_win}")
 
@@ -50,18 +55,22 @@ def guess_number(name="newplayer"):
         else:
             print("\n🥰🎉")
             print("thank you for playing!")
-            sys.exit(f"Bye {name}!, 👋")        
-    play_guess_num()
+            if __name__ == "__main__":
+              sys.exit(f"Bye {name}!, 👋")   
+            else:
+               return       
+    return play_guess_num()
 if __name__ == "__main__":
-  import argparse
+    import argparse
 
 
-  parser = argparse.ArgumentParser(
-        description="provides a personalized Gaming experience for the Number-Guess game"
+    parser = argparse.ArgumentParser(
+            description="provides a personalized Gaming experience for the Number-Guess game"
     )
 
-  parser.add_argument("-n", "--name", metavar="name",required=True, help= "input the name of the person playing")
-  args = parser.parse_args()
-    
-number_guess = guess_number(args.name)
-number_guess()
+    parser.add_argument("-n", "--name", metavar="name",required=True, help= "input the name of the person playing")
+
+    args = parser.parse_args()
+        
+    num_guess = number_guess(args.name)
+    num_guess()
